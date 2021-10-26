@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tv_sum_price"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:hint="购房总价"
+        android:drawableRight="@mipmap/wan"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tv_loan_rate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="20dp"
+        android:drawableRight="@mipmap/glpercent"
+        android:layout_marginTop="10dp"
+        android:hint="按揭部分"/>
+
+    <Button
+        android:id="@+id/calSumButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="计算贷款总金额"/>
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tv_shop_loan"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="40dp"
+            android:hint="商贷"
+            android:drawableRight="@mipmap/wan"/>
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tv_housing_fund"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="公积金"
+        android:drawableRight="@mipmap/wan"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="还款方式:"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"/>
+
+        <RadioGroup
+            android:id="@+id/interest_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+            <RadioButton
+                android:id="@+id/bt_benxi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="等额本息"
+                android:textSize="18sp"
+                android:layout_weight="0.5"/>
+            <RadioButton
+                android:id="@+id/bt_benjin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="等额本金"
+                android:textSize="18sp"
+                android:layout_weight="0.5"/>
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="贷款年限:"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"/>
+        <Spinner
+            android:id="@+id/duration_choose"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:entries="@array/loan_years"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="基准利率:"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"/>
+        <Spinner
+            android:id="@+id/rate_choose"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:entries="@array/loan_rate"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/calRepayDetail"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="60dp"
+        android:text="计算还款明细"/>
+
+    <TextView
+        android:id="@+id/tv_repay_detail"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:padding="10dp"/>
+</LinearLayout>

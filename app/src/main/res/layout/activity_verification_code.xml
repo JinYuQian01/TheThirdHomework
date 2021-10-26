@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerificationCodeActivity">
+    <TextView
+        android:id="@+id/tv_verification_code_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请输入验证码"
+        android:textSize="28sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"/>
+    <com.jyn.vcview.VerificationCodeView
+        android:id="@+id/verification_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:vcv_et_bg="@drawable/et_code_test1"
+        app:vcv_et_cursor="@drawable/et_cursor"
+        app:vcv_et_cursor_visible="false"
+        app:vcv_et_inputType="numberPassword"
+        app:vcv_et_number="4"
+        app:vcv_et_spacing="6dp"
+        app:vcv_et_text_color="#FFC107"
+        app:vcv_et_text_size="6sp"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
